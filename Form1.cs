@@ -30,7 +30,7 @@ namespace Library_v1._2
             this.libraryTableAdapter.Fill(this.libraryDataSet.library);
 
         }
-        
+        /*
         private void button2_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -44,7 +44,7 @@ namespace Library_v1._2
              cmdsave.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Successfully");
-        }
+        }*/
 
         private void button1_Click(object sender, EventArgs e)
         {
