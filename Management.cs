@@ -14,10 +14,10 @@ using System.Security.Cryptography;
 
 namespace Library_v1._2
 {
-    public partial class Form1 : Form
+    public partial class Management : Form
     {
         
-        public Form1()
+        public Management()
         {
             InitializeComponent();
             this.BackColor = ColorTranslator.FromHtml("#8294C4");
@@ -101,6 +101,27 @@ namespace Library_v1._2
             cmdUpdate.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("successfull");
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            lblID.Text = "";
+            txtName.Text = "";
+            txtAuthor.Text = "";
+            txtPage.Text = "";
+            cmbGenre.Text = "";
+            radioButton1.Checked=false;
+            radioButton2.Checked=false;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlCommand cmdDelete = new SqlCommand("Delete from dbo.library where BookID=@k1",conn);
+            cmdDelete.Parameters.AddWithValue("@k1", lblID.Text);
+            cmdDelete.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Successfully");
         }
     }
 }
