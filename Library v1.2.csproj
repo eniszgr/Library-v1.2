@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,12 @@
     <Compile Include="Entering.Designer.cs">
       <DependentUpon>Entering.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStatics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStatics.Designer.cs">
+      <DependentUpon>frmStatics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Entering.resx">
       <DependentUpon>Entering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStatics.resx">
+      <DependentUpon>frmStatics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management.resx">
       <DependentUpon>Management.cs</DependentUpon>

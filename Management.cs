@@ -123,5 +123,11 @@ namespace Library_v1._2
             conn.Close();
             MessageBox.Show("Successfully");
         }
+
+        private void btnStatics_Click(object sender, EventArgs e)
+        {
+            frmStatics frmStatics= new frmStatics();
+            frmStatics.Show();
+        }
     }
 }

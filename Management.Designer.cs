@@ -151,7 +151,7 @@
             this.genreDataGridViewTextBoxColumn.HeaderText = "Genre";
             this.genreDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
-            this.genreDataGridViewTextBoxColumn.Width = 150;
+            this.genreDataGridViewTextBoxColumn.Width = 175;
             // 
             // loanDataGridViewCheckBoxColumn
             // 
@@ -403,9 +403,10 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(375, 283);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 23);
+            this.label2.Size = new System.Drawing.Size(58, 23);
             this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.label2.Text = "False";
+            this.label2.Visible = false;
             this.label2.TextChanged += new System.EventHandler(this.lbl2changed);
             // 
             // btnList
@@ -426,6 +427,7 @@
             this.btnStatics.TabIndex = 4;
             this.btnStatics.Text = "Statics";
             this.btnStatics.UseVisualStyleBackColor = true;
+            this.btnStatics.Click += new System.EventHandler(this.btnStatics_Click);
             // 
             // btnDelete
             // 
@@ -467,7 +469,7 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // Form1
+            // Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -478,8 +480,8 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Management";
+            this.Text = "Managment";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
