@@ -61,6 +61,9 @@
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnextra = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnList = new System.Windows.Forms.Button();
             this.btnStatics = new System.Windows.Forms.Button();
@@ -257,7 +260,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton2.Location = new System.Drawing.Point(295, 310);
+            this.radioButton2.Location = new System.Drawing.Point(304, 309);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(90, 20);
             this.radioButton2.TabIndex = 15;
@@ -384,6 +387,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnSearch);
+            this.groupBox3.Controls.Add(this.txtSearch);
+            this.groupBox3.Controls.Add(this.btnextra);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.btnList);
             this.groupBox3.Controls.Add(this.btnStatics);
@@ -398,10 +404,41 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Processes";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSearch.Location = new System.Drawing.Point(358, 237);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 34);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Visible = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(349, 277);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 30);
+            this.txtSearch.TabIndex = 8;
+            this.txtSearch.Visible = false;
+            // 
+            // btnextra
+            // 
+            this.btnextra.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnextra.Location = new System.Drawing.Point(358, 313);
+            this.btnextra.Name = "btnextra";
+            this.btnextra.Size = new System.Drawing.Size(75, 41);
+            this.btnextra.TabIndex = 7;
+            this.btnextra.Text = " ...";
+            this.btnextra.UseVisualStyleBackColor = true;
+            this.btnextra.Click += new System.EventHandler(this.btnextra_Click_1);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(375, 283);
+            this.label2.Location = new System.Drawing.Point(354, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 23);
             this.label2.TabIndex = 6;
@@ -539,6 +576,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pageDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn loanDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnextra;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 

@@ -16,7 +16,7 @@ namespace Library_v1._2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Entering());
+            Application.Run(new Management());
         }
     }
 }

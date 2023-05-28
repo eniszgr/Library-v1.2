@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Xml.Linq;
 using System.Security.Cryptography;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Collections;
 
 namespace Library_v1._2
 {
@@ -28,13 +30,13 @@ namespace Library_v1._2
         //sql connection
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'libraryDataSet.library' table. You can move, or remove it, as needed.
             this.libraryTableAdapter.Fill(this.libraryDataSet.library);
-
         }
         private void btnList_Click(object sender, EventArgs e)
-        {
-            this.libraryTableAdapter.Fill(this.libraryDataSet.library);
+        {   
+                
+           // this.libraryTableAdapter.Fill(this.libraryDataSet.library);
+            dataGridView1.DataSource=this.libraryDataSet.library;
         }
         private void btnGenerate_Click(object sender, EventArgs e)
         {
@@ -129,5 +131,26 @@ namespace Library_v1._2
             frmStatics frmStatics= new frmStatics();
             frmStatics.Show();
         }
+        
+
+        private void btnextra_Click_1(object sender, EventArgs e)
+        {
+            txtSearch.Visible = !txtSearch.Visible;
+            btnSearch.Visible = !btnSearch.Visible;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {   
+            conn.Open();
+            SqlCommand cmdfind = new SqlCommand("SELECT * FROM library WHERE BookID = @searchValue", conn);
+            cmdfind.Parameters.AddWithValue("@searchValue", txtSearch.Text);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmdfind); //pull the information form sql table
+            DataTable dataTable = new DataTable();// use the datatable to get correctly
+            adapter.Fill(dataTable);        
+            dataGridView1.DataSource = dataTable;
+            conn.Close();
+        }
     }
 }
+    
+ 
