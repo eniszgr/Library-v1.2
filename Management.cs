@@ -33,9 +33,7 @@ namespace Library_v1._2
             this.libraryTableAdapter.Fill(this.libraryDataSet.library);
         }
         private void btnList_Click(object sender, EventArgs e)
-        {   
-                
-           // this.libraryTableAdapter.Fill(this.libraryDataSet.library);
+        {  
             dataGridView1.DataSource=this.libraryDataSet.library;
         }
         private void btnGenerate_Click(object sender, EventArgs e)
